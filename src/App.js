@@ -1,29 +1,19 @@
-import React from "react";
-import QrReader from "react-qr-reader";
+import React, { useState } from "react";
+import Scanner from "./components/Scanner";
+import Result from "./components/Result";
 import "./App.css";
 
-function App() {
-  const handleScan = data => {
-    if (data) {
-      console.log(data);
-    }
-  };
+export default () => {
+  const [state, setState] = useState(null);
 
-  const handleError = err => {
-    console.error(err);
-  };
+  const handleOutput = (val = null) => setState(val);
+  console.log(state);
+
+  const ActiveComponent = state ? Result : Scanner;
 
   return (
     <div className="App">
-      <h1>Please Scan!</h1>
-      <QrReader
-        delay={200}
-        onError={handleError}
-        onScan={handleScan}
-        style={{ width: "100%" }}
-      />
+      <ActiveComponent {...{ handleOutput, state }} />
     </div>
   );
-}
-
-export default App;
+};
