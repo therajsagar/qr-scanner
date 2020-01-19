@@ -1,7 +1,7 @@
 import React from "react";
 import QrReader from "react-qr-reader";
 
-export default ({ handleOutput }) => {
+export default ({ handleOutput, state }) => {
   const handleScan = data => {
     if (data) {
       handleOutput(data);
@@ -14,7 +14,8 @@ export default ({ handleOutput }) => {
 
   return (
     <>
-      <h2>Scanning...</h2>
+      <h2 className="display-txt">Scanning..</h2>
+      {!state && <div className="loader"></div>}
       <QrReader
         delay={200}
         onError={handleError}

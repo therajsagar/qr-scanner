@@ -50,15 +50,58 @@
   border: 2px solid rgb(146, 236, 86);
   padding: 30px 20px;
   border-radius: 15px;
+  margin-top: 130px;
 }
 
 .retry-btn {
   color: darkblue;
   font-size: 15px;
   font-weight: bolder;
-  border: 1px solid seagreen;
+  border: 2px solid seagreen;
   background-color: transparent;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.retry-btn:hover {
+  background-color: lightgoldenrodyellow;
+  color: rgb(235, 22, 22);
+}
+
+.output {
+  border: 2px solid salmon;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5vh;
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+
+.result-wrapper {
+  margin-top: 150px;
+}
+
+.display-txt {
+  margin-top: 30px;
+}
+
+.loader {
+  display: inline-block;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
