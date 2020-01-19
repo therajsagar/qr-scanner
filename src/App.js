@@ -7,7 +7,6 @@ export default () => {
   const [state, setState] = useState(null);
 
   const handleOutput = (val = null) => setState(val);
-  console.log(state);
 
   const ActiveComponent = state ? Result : Scanner;
 

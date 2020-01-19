@@ -38,5 +38,27 @@
 }
 
 .scan-comp {
-  width: "100%";
+  width: 280px;
+  height: 300px;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid rgb(146, 236, 86);
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+
+.retry-btn {
+  color: darkblue;
+  font-size: 15px;
+  font-weight: bolder;
+  border: 1px solid seagreen;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }

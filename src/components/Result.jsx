@@ -2,9 +2,11 @@ import React from "react";
 
 export default ({ state, handleOutput }) => {
   return (
-    <>
-      <h1>{state}</h1>
-      <button onClick={() => handleOutput()}>Re-Scan</button>
-    </>
+    <div className="result-wrapper">
+      <button onClick={() => handleOutput()} className="retry-btn">
+        {state === "Permission denied" ? "Retry" : "Re-Scan"}
+      </button>
+      <h3 className="op">{state}</h3>
+    </div>
   );
 };
